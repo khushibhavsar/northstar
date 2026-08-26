@@ -1,16 +1,43 @@
-# React + Vite
+# NorthStar ✦
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+NorthStar is a personalized trip-planning web app that generates a simple day-by-day itinerary based on destination, travel dates, arrival/departure times, and number of travellers.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://khushibhavsar.github.io/northstar/
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Enter a destination city
+- Choose travel dates
+- Choose arrival and departure times
+- Choose number of travellers
+- Fetch real tourist attractions using the Geoapify API
+- Generate a simple day-by-day itinerary
+- Display attraction names, addresses, and images
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React
+- JavaScript
+- Vite
+- CSS
+- Geoapify API
+- Wikipedia API
+- GitHub Pages
+
+## How It Works
+
+1. The user enters trip information.
+2. NorthStar sends the destination to the Geoapify Geocoding API.
+3. The API returns latitude and longitude.
+4. NorthStar uses those coordinates to fetch nearby tourist attractions.
+5. The attractions are filtered and divided across the trip days.
+6. Arrival and departure times affect how many activities are scheduled on the first and last day.
+
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/khushibhavsar/northstar.git
