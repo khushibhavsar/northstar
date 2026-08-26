@@ -1,0 +1,267 @@
+/* Cozy, elegant font pairing:
+   Playfair Display for headings, Poppins for body text */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  /* warm, cozy cream background */
+  background-color: #faf3e9;
+  color: #2e2a25;
+}
+
+.app {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* ---------------------------------- */
+/* HOME PAGE / HERO                   */
+/* ---------------------------------- */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.earth-svg {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 10px 20px rgba(21, 115, 176, 0.35));
+}
+
+.continent {
+  fill: #3fae5c;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+  margin: 10px 0 0;
+  color: #204b3a;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #8a7d6c;
+  margin-top: 10px;
+}
+
+/* ---------------------------------- */
+/* TRIP FORM                          */
+/* ---------------------------------- */
+
+.trip-form {
+  width: 100%;
+  background: #fffaf3;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(60, 45, 25, 0.1);
+  border: 1px solid #f0e4d2;
+}
+
+.trip-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4a4136;
+}
+
+.trip-form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #e4d7c2;
+  border-radius: 10px;
+  background: #fffdf9;
+}
+
+.trip-form input:focus {
+  outline: none;
+  border-color: #3fae5c;
+  box-shadow: 0 0 0 3px rgba(63, 174, 92, 0.15);
+}
+
+.trip-form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #2aa9e0, #3fae5c);
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.trip-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(42, 169, 224, 0.35);
+}
+
+.form-message {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: #fff3e0;
+  border: 1px solid #f0d9b0;
+  border-radius: 10px;
+  color: #7a5b25;
+  text-align: center;
+}
+
+/* ---------------------------------- */
+/* ITINERARY PAGE                     */
+/* ---------------------------------- */
+
+.itinerary-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 25px;
+
+  padding: 10px 18px;
+  border: 1px solid #d8c9ac;
+  border-radius: 30px;
+
+  background: #fffaf3;
+  color: #4a4136;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.back-button:hover {
+  background: #f0e4d2;
+}
+
+.trip-summary {
+  padding: 25px;
+
+  background: #fffaf3;
+  border-radius: 20px;
+  border: 1px solid #f0e4d2;
+  text-align: left;
+
+  box-shadow: 0 10px 30px rgba(60, 45, 25, 0.08);
+}
+
+.trip-summary h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  margin-top: 0;
+  color: #204b3a;
+  text-align: left;
+}
+
+.itinerary {
+  margin-top: 40px;
+}
+
+.itinerary > h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #204b3a;
+  text-align: left;
+}
+
+.day-card {
+  background: #fffaf3;
+
+  padding: 25px;
+  margin-bottom: 25px;
+
+  border-radius: 20px;
+  border: 1px solid #f0e4d2;
+
+  box-shadow: 0 10px 30px rgba(60, 45, 25, 0.08);
+}
+
+.day-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2aa9e0;
+  text-align: left;
+}
+
+.place-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 15px 0;
+  border-bottom: 1px solid #f0e4d2;
+}
+
+.place-card:last-child {
+  border-bottom: none;
+}
+
+.place-image {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.place-text h4 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #2e2a25;
+  text-align: left;
+}
+
+.place-text p {
+  color: #8a7d6c;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .trip-form {
+    padding: 20px;
+  }
+
+  .place-card {
+    align-items: flex-start;
+  }
+}
